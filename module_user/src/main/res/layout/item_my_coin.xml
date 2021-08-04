@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="签到 积分10+21"
+        android:textColor="@color/text_333"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentStart="true"
+        android:text="2019-08-31 00:03:16"
+        android:textColor="@color/text_999"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/coin_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="+17"
+        android:textColor="@color/theme"
+        android:textSize="18sp" />
+</RelativeLayout>

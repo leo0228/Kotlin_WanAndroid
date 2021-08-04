@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SwitchCompat.Control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/yellow</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/red</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/orange</item> <!--开关轨道颜色-->
+    </style>
+
+    <style name="SwitchCompat.Text" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+</resources>

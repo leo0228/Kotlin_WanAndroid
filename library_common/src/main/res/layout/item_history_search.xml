@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/rounded_corners_white_15_bg"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/history_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:maxLines="1"
+        android:text="@string/history_search"
+        android:textColor="@color/text_ccc"
+        android:textSize="13sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/history_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/selector_edit_text_delete" />
+</LinearLayout>

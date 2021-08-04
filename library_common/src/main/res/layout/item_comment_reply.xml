@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Reginer:"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/to_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@Ant_way"
+            android:textColor="@color/text_333"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:text="2021-07-03 09:10"
+            android:textColor="@color/text_ccc"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="true"
+        android:lineSpacingExtra="3dp"
+        android:padding="8dp"
+        android:text="真就世人皆醉我独醒呗？同一功能的实现确实可以选择不同语言，绝大多数情况下实现一样的功能kt比java方便，效率更高。已经公认的事情还要搁这杠一波，java能做的kotlin都能做，这种情况下还用java只能说是纯脑摊。"
+        android:textColor="@color/text_666"
+        android:textSize="13sp" />
+</LinearLayout>

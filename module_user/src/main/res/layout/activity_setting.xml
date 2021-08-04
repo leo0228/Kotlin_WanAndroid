@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="跟随系统暗色模式"
+                    android:textColor="@color/text_666"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/system_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textOff="Off"
+                    android:textOn="On"
+                    android:theme="@style/SwitchCompat.Control"
+                    app:showText="true"
+                    app:switchPadding="5dp"
+                    app:switchTextAppearance="@style/SwitchCompat.Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="暗色模式"
+                    android:textColor="@color/text_666"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/dark_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textOff="Off"
+                    android:textOn="On"
+                    android:theme="@style/SwitchCompat.Control"
+                    app:showText="true"
+                    app:switchPadding="5dp"
+                    app:switchTextAppearance="@style/SwitchCompat.Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="屏幕录制"
+                    android:textColor="@color/text_666"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/record_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/text_666"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/screen_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textOff="Off"
+                    android:textOn="On"
+                    android:theme="@style/SwitchCompat.Control"
+                    app:showText="true"
+                    app:switchPadding="5dp"
+                    app:switchTextAppearance="@style/SwitchCompat.Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_transparent"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:gravity="center_vertical"
+                    android:text="隐私政策"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_transparent"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:gravity="center_vertical"
+                    android:text="问题反馈"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_transparent"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:gravity="center_vertical"
+                    android:text="关于玩Android"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="清除缓存"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cache_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:singleLine="true"
+                    android:text="0KB"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corners_white_0_bg"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="版本更新"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:singleLine="true"
+                    android:text="已是最新版本"
+                    android:textColor="@color/text_666"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/theme"
+            android:paddingStart="100dp"
+            android:paddingEnd="100dp"
+            android:text="@string/logout"
+            android:textColor="@color/text_fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

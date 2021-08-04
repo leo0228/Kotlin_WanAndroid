@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/website_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="androidos"
+        android:textColor="@color/text_333"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/website_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/website_name"
+        android:layout_alignParentStart="true"
+        android:text="https://www.androidos.net.cn/sourcecode"
+        android:textColor="@color/text_999"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/website_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@id/website_delete"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_edit_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/website_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_delete_24" />
+</RelativeLayout>

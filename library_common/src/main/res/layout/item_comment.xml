@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Ant_way"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="2021-07-03 09:10"
+            android:textColor="@color/text_ccc"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1. 脱糖的主要目的是为了让 Java 语言的新特性能够在 Android 设备上运行起来，最典型的就是 Java8 中的 Lambda 语法；\n2. D8 脱糖后一般是属于字节码层面的修改，但是肯定是往更好的方向发展；\n3. 对于 App 开发来说，脱糖这个一般不需要太关注，对于一些 Plugin 开发者来说还是需要关注一下。\n\n关于  D8 和  R8 的功能介绍，我最近翻译了 jakewharton 的一个系列文章来介绍，有兴趣可以去查看一下：https://juejin.cn/user/2172290705131016/posts"
+        android:textColor="@color/text_666"
+        android:lineSpacingExtra="3dp"
+        android:textSize="13sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

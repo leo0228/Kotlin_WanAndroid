@@ -1,0 +1,8 @@
+apply plugin: 'com.android.library'
+apply from:'../config.gradle'
+
+dependencies {
+    implementation project(path: ':library_common')
+
+    implementation 'com.youth.banner:banner:2.0.11'
+}

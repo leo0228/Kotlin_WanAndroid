@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+//apply plugin:'walle'
+apply from:'../config.gradle'
+
+android {
+
+    defaultConfig {
+        applicationId "com.leo.wanandroid"
+    }
+
+    signingConfigs {
+        sign {
+            storeFile file("../moyoi.keystore.jks")
+            storePassword "MoyoiNo1"
+            keyAlias "moyoi"
+            keyPassword "MoyoiNo1"
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            // 启用代码压缩、优化及混淆
+            minifyEnabled true
+            // 启用资源压缩，需配合 minifyEnabled=true 使用
+            shrinkResources true
+            // 指定混淆保留规则
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sign
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sign
+            //应用包名添加.debug后缀
+            applicationIdSuffix ".debug"
+            //禁用PNG压缩。
+            crunchPngs false
+            //停用Crashlytics，以提高调试 build 的构建速度
+            ext.enableCrashlytics = false
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dexOptions {
+        // 声明是否对依赖的库进行 dex 预处理来使你的增量构建更快速
+        preDexLibraries true
+        // 设置最大的线程数量使用当运行 dex-in-process 时,默认值是 4
+        maxProcessCount 8
+    }
+
+}
+
+kapt {
+    useBuildCache = true
+    // 增加注解处理器的最大错误次数,默认为 100。
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+//walle {
+//    // 指定渠道包的输出路径
+//    apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+//    // 定制渠道包的APK的文件名称
+//    apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk'
+//    // 渠道配置文件
+//    channelFile = new File("${project.getProjectDir()}/channel")
+//}
+
+dependencies {
+    implementation project(path: ':library_common')
+
+    implementation project(path: ':module_category')
+    implementation project(path: ':module_home')
+    implementation project(path: ':module_message')
+    implementation project(path: ':module_square')
+    implementation project(path: ':module_user')
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'org.mockito:mockito-core:2.19.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    //    api 'com.meituan.android.walle:library:1.1.7' //渠道打包
+}

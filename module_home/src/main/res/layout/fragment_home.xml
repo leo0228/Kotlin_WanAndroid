@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlDisableContentWhenLoading="true"
+        app:srlDisableContentWhenRefresh="true"
+        app:srlEnableLoadMore="true"
+        app:srlEnableOverScrollBounce="false"
+        app:srlEnableRefresh="true"
+        app:srlPrimaryColor="@color/theme">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_header_red" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                    </RelativeLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_float_search"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingTop="8dp"
+        android:background="@color/theme"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <include
+            android:id="@+id/float_search"
+            layout="@layout/layout_search" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moyoi.library_common">
+
+    <application>
+        <activity
+            android:name=".ui.WebActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.SearchActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.UserShareActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+    </application>
+</manifest>
